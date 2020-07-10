@@ -300,7 +300,7 @@ const Registration = () => {
             <p>Registration Number: {registration}</p>
             Check registration at{' '}
             <a
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
               href={`http://localhost:5000/api/v1/registrations/${registration}`}
             >
