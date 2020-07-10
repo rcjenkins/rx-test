@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReedExhibitionsRegistrationsTest", "tests\ReedExhibitionsRegistrationsTest\ReedExhibitionsRegistrationsTest.csproj", "{AEA0ECC1-5AEF-495B-A7A3-5F18F31AEBDC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReedExhibitionsRegistrations", "src\ReedExhibitionsRegistrationsTest\ReedExhibitionsRegistrations.csproj", "{0CDBC601-2607-4D9F-AB0C-E80CF3077533}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReedExhibitionsRegistrations", "src\ReedExhibitionsRegistrations\ReedExhibitionsRegistrations.csproj", "{465876B4-6563-42ED-81B0-73A15A16C586}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{AEA0ECC1-5AEF-495B-A7A3-5F18F31AEBDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEA0ECC1-5AEF-495B-A7A3-5F18F31AEBDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEA0ECC1-5AEF-495B-A7A3-5F18F31AEBDC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0CDBC601-2607-4D9F-AB0C-E80CF3077533}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0CDBC601-2607-4D9F-AB0C-E80CF3077533}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0CDBC601-2607-4D9F-AB0C-E80CF3077533}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0CDBC601-2607-4D9F-AB0C-E80CF3077533}.Release|Any CPU.Build.0 = Release|Any CPU
+		{465876B4-6563-42ED-81B0-73A15A16C586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{465876B4-6563-42ED-81B0-73A15A16C586}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{465876B4-6563-42ED-81B0-73A15A16C586}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{465876B4-6563-42ED-81B0-73A15A16C586}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

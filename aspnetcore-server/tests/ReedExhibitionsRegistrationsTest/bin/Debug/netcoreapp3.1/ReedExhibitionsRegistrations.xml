@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>IO.Swagger</name>
+        <name>ReedExhibitionsRegistrations</name>
     </assembly>
     <members>
         <member name="T:IO.Swagger.Attributes.ValidateModelStateAttribute">

@@ -7190,8 +7190,8 @@
     },
     "IO.Swagger/1.0.0": {
       "type": "project",
-      "path": "../../src/ReedExhibitionsRegistrationsTest/ReedExhibitionsRegistrations.csproj",
-      "msbuildProject": "../../src/ReedExhibitionsRegistrationsTest/ReedExhibitionsRegistrations.csproj"
+      "path": "../../src/ReedExhibitionsRegistrations/ReedExhibitionsRegistrations.csproj",
+      "msbuildProject": "../../src/ReedExhibitionsRegistrations/ReedExhibitionsRegistrations.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -7231,8 +7231,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "V:\\react-projects\\reed-exhibitions\\aspnetcore-server\\src\\ReedExhibitionsRegistrationsTest\\ReedExhibitionsRegistrations.csproj": {
-              "projectPath": "V:\\react-projects\\reed-exhibitions\\aspnetcore-server\\src\\ReedExhibitionsRegistrationsTest\\ReedExhibitionsRegistrations.csproj"
+            "V:\\react-projects\\reed-exhibitions\\aspnetcore-server\\src\\ReedExhibitionsRegistrations\\ReedExhibitionsRegistrations.csproj": {
+              "projectPath": "V:\\react-projects\\reed-exhibitions\\aspnetcore-server\\src\\ReedExhibitionsRegistrations\\ReedExhibitionsRegistrations.csproj"
             }
           }
         }

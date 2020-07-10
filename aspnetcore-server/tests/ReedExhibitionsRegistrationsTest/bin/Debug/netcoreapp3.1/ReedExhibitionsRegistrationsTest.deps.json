@@ -1439,7 +1439,7 @@
           "Swashbuckle.AspNetCore.SwaggerUI": "5.0.0-rc4"
         },
         "runtime": {
-          "IO.Swagger.dll": {}
+          "ReedExhibitionsRegistrations.dll": {}
         }
       }
     }

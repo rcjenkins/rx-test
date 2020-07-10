@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "W1RPo2Ly41vajmwz2ylrl4T6dsBaUPzIDFcBkRtUSWb9JZA6QNpkBUDG6xIxOy7O5dJMerQfyyy01s7eytBU9Q==",
+  "dgSpecHash": "bSfQPUxhIMZh1bMFmlV5B27zKVNzfEGAg0YPeB0FCJc710LH5DKWCqY5GsiT4HFQ3for2HvvuUdFFW+5RNsK8w==",
   "success": true,
   "projectFilePath": "V:\\react-projects\\reed-exhibitions\\aspnetcore-server\\tests\\ReedExhibitionsRegistrationsTest\\ReedExhibitionsRegistrationsTest.csproj",
   "expectedPackageFiles": [
