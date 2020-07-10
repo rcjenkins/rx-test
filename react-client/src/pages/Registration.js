@@ -113,6 +113,7 @@ const Registration = () => {
             );
           });
           setErrors(newErrors);
+          setNetworkError(err.response.data.title);
         } else {
           setNetworkError(
             `${err.response.status}: ${err.response.statusText}` ||

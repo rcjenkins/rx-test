@@ -7190,8 +7190,8 @@
     },
     "IO.Swagger/1.0.0": {
       "type": "project",
-      "path": "../src/IO.Swagger/ReedExhibitionsRegistrations.csproj",
-      "msbuildProject": "../src/IO.Swagger/ReedExhibitionsRegistrations.csproj"
+      "path": "../../src/ReedExhibitionsRegistrationsTest/ReedExhibitionsRegistrations.csproj",
+      "msbuildProject": "../../src/ReedExhibitionsRegistrationsTest/ReedExhibitionsRegistrations.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -7210,11 +7210,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "V:\\react-projects\\reed-exhibitions\\aspnetcore-server\\ReedExhibitionsRegistrationsTest\\ReedExhibitionsRegistrationsTest.csproj",
+      "projectUniqueName": "V:\\react-projects\\reed-exhibitions\\aspnetcore-server\\tests\\ReedExhibitionsRegistrationsTest\\ReedExhibitionsRegistrationsTest.csproj",
       "projectName": "ReedExhibitionsRegistrationsTest",
-      "projectPath": "V:\\react-projects\\reed-exhibitions\\aspnetcore-server\\ReedExhibitionsRegistrationsTest\\ReedExhibitionsRegistrationsTest.csproj",
+      "projectPath": "V:\\react-projects\\reed-exhibitions\\aspnetcore-server\\tests\\ReedExhibitionsRegistrationsTest\\ReedExhibitionsRegistrationsTest.csproj",
       "packagesPath": "C:\\Users\\rcjen\\.nuget\\packages\\",
-      "outputPath": "V:\\react-projects\\reed-exhibitions\\aspnetcore-server\\ReedExhibitionsRegistrationsTest\\obj\\",
+      "outputPath": "V:\\react-projects\\reed-exhibitions\\aspnetcore-server\\tests\\ReedExhibitionsRegistrationsTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "V:\\react-projects\\reed-exhibitions\\aspnetcore-server\\NuGet.Config",
@@ -7231,8 +7231,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "V:\\react-projects\\reed-exhibitions\\aspnetcore-server\\src\\IO.Swagger\\ReedExhibitionsRegistrations.csproj": {
-              "projectPath": "V:\\react-projects\\reed-exhibitions\\aspnetcore-server\\src\\IO.Swagger\\ReedExhibitionsRegistrations.csproj"
+            "V:\\react-projects\\reed-exhibitions\\aspnetcore-server\\src\\ReedExhibitionsRegistrationsTest\\ReedExhibitionsRegistrations.csproj": {
+              "projectPath": "V:\\react-projects\\reed-exhibitions\\aspnetcore-server\\src\\ReedExhibitionsRegistrationsTest\\ReedExhibitionsRegistrations.csproj"
             }
           }
         }

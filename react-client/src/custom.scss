@@ -39,8 +39,11 @@ $brand-2: #16124C;
     color: red;
 }
 
-main {
+.container {
     flex: 1;
+}
+
+main {
     padding: 1rem 2rem;
     background-color: $white;
 }

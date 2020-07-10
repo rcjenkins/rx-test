@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nkPKjVpwe5LGUb/1j9w0PIBacz8GT2YIfGTapvw6peD057wU+dpWo2EttRAic7RYSmnUydc78e5RGsBFjiFlFA==",
+  "dgSpecHash": "W1RPo2Ly41vajmwz2ylrl4T6dsBaUPzIDFcBkRtUSWb9JZA6QNpkBUDG6xIxOy7O5dJMerQfyyy01s7eytBU9Q==",
   "success": true,
-  "projectFilePath": "V:\\react-projects\\reed-exhibitions\\aspnetcore-server\\ReedExhibitionsRegistrationsTest\\ReedExhibitionsRegistrationsTest.csproj",
+  "projectFilePath": "V:\\react-projects\\reed-exhibitions\\aspnetcore-server\\tests\\ReedExhibitionsRegistrationsTest\\ReedExhibitionsRegistrationsTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rcjen\\.nuget\\packages\\castle.core\\4.2.1\\castle.core.4.2.1.nupkg.sha512",
     "C:\\Users\\rcjen\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
