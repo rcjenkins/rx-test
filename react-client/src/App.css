@@ -1,0 +1,30 @@
+/* form styling */
+fieldset {
+  border: none;
+  margin-bottom: 2rem;
+}
+
+legend {
+  margin-bottom: 0.5rem;
+}
+
+.errors {
+  border: red 2px solid;
+  background: #FFEEEE;
+  padding: .25rem;
+}
+
+.errors li {
+  list-style: none;
+}
+
+.information {
+  border: #0000FF 2px solid;
+  background: #EEEEFF;
+  padding: .25rem;
+  margin-bottom: 2rem;
+}
+
+form {
+  margin-bottom: 2rem;
+}

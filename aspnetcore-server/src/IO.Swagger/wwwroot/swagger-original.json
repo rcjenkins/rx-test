@@ -1,0 +1,384 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Rest API specification for Technical Test",
+    "version" : "1.0.0",
+    "title" : "Reed Exhibitions Mercury Technical Test"
+  },
+  "paths" : {
+    "/api/v1/registrations" : {
+      "post" : {
+        "tags" : [ "Registrations" ],
+        "summary" : "Creates a registration.",
+        "consumes" : [ "application/json-patch+json", "application/json", "text/json", "application/*+json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "registration",
+          "description" : "The registration request",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/RegistrationRequest"
+          }
+        }, {
+          "name" : "x-correlationid",
+          "in" : "header",
+          "description" : "A unique id used to track the request",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "Success",
+            "examples" : {
+              "application/json" : {
+                "registrationId" : "26c51c40-af1e-4c4a-b413-5253a81eaa90"
+              }
+            },
+            "schema" : {
+              "$ref" : "#/definitions/RegistrationResponse"
+            }
+          },
+          "400" : {
+            "description" : "Bad Request",
+            "examples" : {
+              "application/json" : {
+                "error" : {
+                  "code" : "ValidationFailed"
+                },
+                "fieldErrors" : [ {
+                  "field" : "fieldName",
+                  "code" : "IsRequired",
+                  "message" : "The field is required"
+                } ]
+              }
+            },
+            "schema" : {
+              "$ref" : "#/definitions/ErrorResponse"
+            }
+          },
+          "500" : {
+            "description" : "Server Error",
+            "examples" : {
+              "application/json" : {
+                "error" : {
+                  "code" : "InternalServerError",
+                  "message" : "Human friendly error message"
+                }
+              }
+            },
+            "schema" : {
+              "$ref" : "#/definitions/ErrorResponse"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/registrations/{registrationId}" : {
+      "get" : {
+        "tags" : [ "Registrations" ],
+        "summary" : "Returns a Registration record by its ID.",
+        "consumes" : [ ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "registrationId",
+          "in" : "path",
+          "description" : "The ID of the Registration Record",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "x-correlationid",
+          "in" : "header",
+          "description" : "A unique id used to track the request",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "examples" : {
+              "application/json" : {
+                "id" : "569839dd-9668-4872-b829-1d6c1787c6c6",
+                "locale" : "en",
+                "person" : {
+                  "firstName" : "Joe",
+                  "lastName" : "Bloggs",
+                  "email" : "jjbloggs@mailinator.com",
+                  "address" : {
+                    "addressLine1" : "Gateway House",
+                    "addressLine2" : "28 The Quadrant",
+                    "addressLine3" : "",
+                    "city" : "Richmond",
+                    "state" : "Surrey",
+                    "postcode" : "TW9 1DN",
+                    "countryIsoCode" : "GBR"
+                  }
+                },
+                "organisation" : {
+                  "name" : "Acme Ltd",
+                  "address" : {
+                    "addressLine1" : "Gateway House",
+                    "addressLine2" : "28 The Quadrant",
+                    "addressLine3" : "",
+                    "city" : "Richmond",
+                    "state" : "Surrey",
+                    "postcode" : "TW9 1DN",
+                    "countryIsoCode" : "GBR"
+                  }
+                },
+                "registrationDate" : "2020-05-21T20:11:46.616597Z"
+              }
+            },
+            "schema" : {
+              "$ref" : "#/definitions/GetRegistrationResponse"
+            }
+          },
+          "404" : {
+            "description" : "Not Found",
+            "examples" : {
+              "application/json" : {
+                "error" : {
+                  "code" : "InternalServerError",
+                  "message" : "Human friendly error message"
+                }
+              }
+            },
+            "schema" : {
+              "$ref" : "#/definitions/ErrorResponse"
+            }
+          },
+          "500" : {
+            "description" : "Server Error",
+            "examples" : {
+              "application/json" : {
+                "error" : {
+                  "code" : "InternalServerError",
+                  "message" : "Human friendly error message"
+                }
+              }
+            },
+            "schema" : {
+              "$ref" : "#/definitions/ErrorResponse"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "ErrorResponse" : {
+      "type" : "object",
+      "properties" : {
+        "error" : {
+          "$ref" : "#/definitions/Error"
+        },
+        "fieldErrors" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/FieldError"
+          }
+        }
+      }
+    },
+    "Error" : {
+      "type" : "object",
+      "properties" : {
+        "code" : {
+          "type" : "string",
+          "readOnly" : true
+        },
+        "message" : {
+          "type" : "string",
+          "readOnly" : true
+        }
+      }
+    },
+    "FieldError" : {
+      "type" : "object",
+      "properties" : {
+        "field" : {
+          "type" : "string",
+          "readOnly" : true
+        },
+        "code" : {
+          "type" : "string",
+          "readOnly" : true
+        },
+        "message" : {
+          "type" : "string",
+          "readOnly" : true
+        }
+      }
+    },
+    "RegistrationRequest" : {
+      "type" : "object",
+      "required" : [ "person", "registrationDate" ],
+      "properties" : {
+        "organisation" : {
+          "$ref" : "#/definitions/Organisation"
+        },
+        "person" : {
+          "$ref" : "#/definitions/Person"
+        },
+        "registrationDate" : {
+          "type" : "string",
+          "format" : "date-time",
+          "description" : "The date when the person registered."
+        },
+        "locale" : {
+          "type" : "string"
+        }
+      },
+      "example" : {
+        "organisation" : {
+          "name" : "Acme Ltd",
+          "address" : {
+            "addressLine1" : "Gateway House",
+            "addressLine2" : "28 The Quadrant",
+            "addressLine3" : "",
+            "city" : "Richmond",
+            "state" : "Surrey",
+            "postcode" : "TW9 1DN",
+            "countryIsoCode" : "GBR"
+          }
+        },
+        "person" : {
+          "firstName" : "Joe",
+          "lastName" : "Bloggs",
+          "email" : "jjbloggs@mailinator.com",
+          "address" : {
+            "locale" : "en",
+            "addressLine1" : "Gateway House",
+            "addressLine2" : "28 The Quadrant",
+            "addressLine3" : "",
+            "city" : "Richmond",
+            "state" : "Surrey",
+            "postcode" : "TW9 1DN",
+            "countryIsoCode" : "GBR"
+          }
+        },
+        "registrationDate" : "2020-05-21T20:11:46.5983455Z",
+        "locale" : "en"
+      }
+    },
+    "Organisation" : {
+      "type" : "object",
+      "required" : [ "address", "name" ],
+      "properties" : {
+        "name" : {
+          "type" : "string",
+          "description" : "The name of the company",
+          "minLength" : 1,
+          "maxLength" : 120
+        },
+        "address" : {
+          "$ref" : "#/definitions/Address"
+        }
+      },
+      "description" : "The details of an organisation"
+    },
+    "Person" : {
+      "type" : "object",
+      "required" : [ "email", "firstName", "lastName" ],
+      "properties" : {
+        "firstName" : {
+          "type" : "string",
+          "description" : "The first name of the person.",
+          "minLength" : 1,
+          "maxLength" : 150
+        },
+        "lastName" : {
+          "type" : "string",
+          "description" : "The last name of the person.",
+          "minLength" : 1,
+          "maxLength" : 150
+        },
+        "email" : {
+          "type" : "string",
+          "description" : "The email of the person.",
+          "minLength" : 1,
+          "maxLength" : 254
+        },
+        "address" : {
+          "$ref" : "#/definitions/Address"
+        }
+      },
+      "description" : "The details of a person"
+    },
+    "Address" : {
+      "type" : "object",
+      "required" : [ "addressLine1", "countryIsoCode" ],
+      "properties" : {
+        "locale" : {
+          "type" : "string"
+        },
+        "addressLine1" : {
+          "type" : "string",
+          "description" : "Address line 1.",
+          "minLength" : 1,
+          "maxLength" : 150
+        },
+        "addressLine2" : {
+          "type" : "string",
+          "description" : "Address line 2.",
+          "maxLength" : 150
+        },
+        "addressLine3" : {
+          "type" : "string",
+          "description" : "Address line 3.",
+          "maxLength" : 150
+        },
+        "city" : {
+          "type" : "string",
+          "description" : "The city.",
+          "maxLength" : 40
+        },
+        "state" : {
+          "type" : "string",
+          "description" : "The state.",
+          "maxLength" : 60
+        },
+        "postcode" : {
+          "type" : "string",
+          "description" : "The post code.",
+          "maxLength" : 60
+        },
+        "countryIsoCode" : {
+          "type" : "string",
+          "description" : "The ISO3 code of the country.",
+          "minLength" : 1
+        }
+      },
+      "description" : "The address details."
+    },
+    "RegistrationResponse" : {
+      "type" : "object",
+      "properties" : {
+        "registrationId" : {
+          "type" : "string"
+        }
+      }
+    },
+    "GetRegistrationResponse" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "locale" : {
+          "type" : "string"
+        },
+        "person" : {
+          "$ref" : "#/definitions/Person"
+        },
+        "organisation" : {
+          "$ref" : "#/definitions/Organisation"
+        },
+        "registrationDate" : {
+          "type" : "string",
+          "format" : "date-time"
+        }
+      }
+    }
+  }
+}
