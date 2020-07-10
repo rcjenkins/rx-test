@@ -297,7 +297,15 @@ const Registration = () => {
       {registration && (
         <div id="successful-registration">
           <div className="alert alert-info">
-            Registration Number: {registration}
+            <p>Registration Number: {registration}</p>
+            Check registration at{' '}
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href={`http://localhost:5000/api/v1/registrations/${registration}`}
+            >
+              http://localhost:5000/api/v1/registrations/{registration}
+            </a>
           </div>
         </div>
       )}
