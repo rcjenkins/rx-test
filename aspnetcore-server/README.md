@@ -1,6 +1,14 @@
-# IO.Swagger - ASP.NET Core 3.0 Server
+# Reed Exhibitions API - ASP.NET Core 3.0 Server
+
+## API Highlights
+
+  * Used swagger.io to generate the skeleton API server from supplied swagger file
+  * Added CORS
+  * Registrations are persisted to files 
 
 Rest API specification for Technical Test
+
+
 
 ## Run
 
