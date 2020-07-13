@@ -31,13 +31,13 @@ namespace IO.Swagger.Models
         /// Gets or Sets Code
         /// </summary>
         [DataMember(Name="code")]
-        public string Code { get; private set; }
+        public string Code { get; set; }
 
         /// <summary>
         /// Gets or Sets Message
         /// </summary>
         [DataMember(Name="message")]
-        public string Message { get; private set; }
+        public string Message { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

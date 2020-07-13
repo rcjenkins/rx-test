@@ -20,30 +20,30 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
 namespace IO.Swagger.Models
-{ 
+{
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class FieldError : IEquatable<FieldError>
-    { 
+    {
         /// <summary>
         /// Gets or Sets Field
         /// </summary>
-        [DataMember(Name="field")]
-        public string Field { get; private set; }
+        [DataMember(Name = "field")]
+        public string Field { get; set; }
 
         /// <summary>
         /// Gets or Sets Code
         /// </summary>
-        [DataMember(Name="code")]
-        public string Code { get; private set; }
+        [DataMember(Name = "code")]
+        public string Code { get; set; }
 
         /// <summary>
         /// Gets or Sets Message
         /// </summary>
-        [DataMember(Name="message")]
-        public string Message { get; private set; }
+        [DataMember(Name = "message")]
+        public string Message { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -91,17 +91,17 @@ namespace IO.Swagger.Models
             if (ReferenceEquals(null, other)) return false;
             if (ReferenceEquals(this, other)) return true;
 
-            return 
+            return
                 (
                     Field == other.Field ||
                     Field != null &&
                     Field.Equals(other.Field)
-                ) && 
+                ) &&
                 (
                     Code == other.Code ||
                     Code != null &&
                     Code.Equals(other.Code)
-                ) && 
+                ) &&
                 (
                     Message == other.Message ||
                     Message != null &&
@@ -119,18 +119,18 @@ namespace IO.Swagger.Models
             {
                 var hashCode = 41;
                 // Suitable nullity checks etc, of course :)
-                    if (Field != null)
+                if (Field != null)
                     hashCode = hashCode * 59 + Field.GetHashCode();
-                    if (Code != null)
+                if (Code != null)
                     hashCode = hashCode * 59 + Code.GetHashCode();
-                    if (Message != null)
+                if (Message != null)
                     hashCode = hashCode * 59 + Message.GetHashCode();
                 return hashCode;
             }
         }
 
         #region Operators
-        #pragma warning disable 1591
+#pragma warning disable 1591
 
         public static bool operator ==(FieldError left, FieldError right)
         {
@@ -142,7 +142,7 @@ namespace IO.Swagger.Models
             return !Equals(left, right);
         }
 
-        #pragma warning restore 1591
+#pragma warning restore 1591
         #endregion Operators
     }
 }
